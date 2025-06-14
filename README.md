@@ -1,0 +1,125 @@
+````markdown
+# 📸 Automatic EBS Snapshot & Cleanup Using AWS Lambda & Boto3
+
+[![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange?logo=amazon-aws)](https://aws.amazon.com/lambda/)
+[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
+[![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-green?logo=python)](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
+[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)]()
+
+---
+
+## 📌 Objective
+
+To automate the process of:
+- 📦 Creating snapshots of an Amazon EBS volume on a schedule
+- 🧹 Deleting old snapshots older than 30 days
+
+This ensures **automated backups** and **storage cost savings** using AWS Lambda + Boto3 (Python).
+
+---
+
+## 🚀 Features
+
+| Feature | Description |
+|--------|-------------|
+| ✅ Snapshot Automation | Automatically creates snapshots of a specified EBS volume |
+| ⏱️ CloudWatch Scheduling | Triggers Lambda weekly on Sunday at 12:00 PM IST |
+| 🧹 Snapshot Cleanup | Deletes snapshots older than 30 days |
+| 🔐 IAM Integration | Uses a dedicated IAM role with EC2 and logging permissions |
+| 🧾 Logs | All activity logs available in CloudWatch |
+
+---
+
+## 🛠️ Tech Stack
+
+- **AWS Lambda** – serverless compute
+- **Python 3.12**
+- **Boto3** – AWS SDK for Python
+- **CloudWatch Events** – for scheduling
+- **IAM Roles & Policies** – for secure access
+
+---
+
+## 💡 How It Works
+
+1. Lambda is triggered weekly (via CloudWatch Event).
+2. It creates a new snapshot of the specified EBS volume.
+3. It filters all previous snapshots created by the Lambda function.
+4. It deletes any snapshot older than 30 days.
+
+---
+
+## 🧾 Lambda Function Overview
+
+```python
+VOLUME_ID = 'vol-0e5b12ae3d1e23bb6'
+REGION = 'ap-south-1'
+RETENTION_DAYS = 30
+````
+
+📁 See full logic in [`lambda_function.py`](lambda_function.py)
+
+---
+
+## 🖼️ Screenshots (Add Yours!)
+
+> 📍 Place your screenshots in a `/screenshots` folder and reference them like below:
+
+### ✅ CloudWatch Logs
+![image](https://github.com/user-attachments/assets/ce72097b-c344-467f-91a0-5df9099a6909)
+
+
+![image](https://github.com/user-attachments/assets/6677ba22-6387-4d84-9139-14e4bf30fcc1)
+
+![image](https://github.com/user-attachments/assets/cbaed701-c2c5-4f79-a407-7b132407f73c)
+
+
+### ✅ Snapshot Created
+
+![image](https://github.com/user-attachments/assets/2edbb19a-fb4c-4f49-a8d1-52382fd91e3c)
+
+![image](https://github.com/user-attachments/assets/4e732787-b1bb-40bb-bbd3-458d35725623)
+
+
+---
+
+## 🔒 IAM Role & Permissions
+
+* `AmazonEC2FullAccess` — to manage snapshots
+* `AWSLambdaBasicExecutionRole` — for CloudWatch logging
+
+---
+
+## 🧠 Best Practices Followed
+
+* ✅ Tagging snapshots (`CreatedBy = LambdaBackup`)
+* ✅ Time-based cleanup for cost control
+* ✅ Reusable code and environment-based variables
+* ✅ IAM role separation
+
+---
+
+## 🧑‍💻 Author
+
+**👤 Vignesh Sadanki**
+`📚 BITS Pilani - Serverless Architecture Assignment`
+
+---
+
+## 📃 License
+
+This project is under the [MIT License](LICENSE)
+
+---
+
+```
+
+---
+
+## ✅ What Next?
+
+- ✅ Paste the above into your `README.md`
+- ✅ `git add README.md && git commit -m "Added beautiful README" && git push`
+
+Let me know if you want me to generate a sample screenshot or `.gitignore`, or help with another assignment repo!
+```
