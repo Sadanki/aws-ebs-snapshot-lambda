@@ -1,10 +1,15 @@
 ````markdown
 # 📸 Automatic EBS Snapshot & Cleanup Using AWS Lambda & Boto3
 
-[![AWS Lambda](https://img.shields.io/badge/AWS-Lambda-orange?logo=amazon-aws)](https://aws.amazon.com/lambda/)
-[![Python](https://img.shields.io/badge/Python-3.12-blue?logo=python)](https://www.python.org/)
-[![Boto3](https://img.shields.io/badge/Boto3-AWS%20SDK-green?logo=python)](https://boto3.amazonaws.com/v1/documentation/api/latest/index.html)
-[![Status](https://img.shields.io/badge/Status-Completed-brightgreen)]()
+## 📝 Overview
+
+This project automates the process of:
+- 📦 Creating snapshots for an Amazon EBS volume
+- 🧹 Deleting old snapshots older than 30 days
+
+It uses AWS Lambda (Python) and Boto3 to ensure your volumes are backed up and storage is optimized.
+
+---
 
 ---
 
