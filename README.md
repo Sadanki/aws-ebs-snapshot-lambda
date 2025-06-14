@@ -61,13 +61,9 @@ RETENTION_DAYS = 30
 
 ---
 
-## 🖼️ Screenshots (Add Yours!)
 
-> 📍 Place your screenshots in a `/screenshots` folder and reference them like below:
 
 ### ✅ CloudWatch Logs
-![image](https://github.com/user-attachments/assets/ce72097b-c344-467f-91a0-5df9099a6909)
-
 
 ![image](https://github.com/user-attachments/assets/6677ba22-6387-4d84-9139-14e4bf30fcc1)
 
@@ -102,7 +98,7 @@ RETENTION_DAYS = 30
 ## 🧑‍💻 Author
 
 **👤 Vignesh Sadanki**
-`📚 BITS Pilani - Serverless Architecture Assignment`
+
 
 ---
 
@@ -116,10 +112,3 @@ This project is under the [MIT License](LICENSE)
 
 ---
 
-## ✅ What Next?
-
-- ✅ Paste the above into your `README.md`
-- ✅ `git add README.md && git commit -m "Added beautiful README" && git push`
-
-Let me know if you want me to generate a sample screenshot or `.gitignore`, or help with another assignment repo!
-```
